@@ -7,6 +7,7 @@ body{
   * {
   box-sizing: border-box;
   }
+ 
   
   .row::after {
   content: "";
@@ -30,7 +31,87 @@ body{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    header{
+      display: inline-flex;
+    }
+
+    nav {
+      &.primary-navigation {
+        margin: 0 auto;
+        display: flex;
+      
+        padding: 20px 0 0 0;  
+        text-align: center;
+        font-size: 16px;
+    
+        ul li {
+          list-style: none;
+          margin: 0 auto;
+          border-left: 2px solid #580ef6;
+          display: inline-block;
+          padding: 0 30px;
+          position: relative;
+          text-decoration: none;
+          text-align: center;
+          font-family: arvo;
+        }
+    
+        li a {
+          color: white;
+        }
+    
+        li a:hover {
+          color: #8851ff;
+        }
+    
+        li:hover {
+          cursor: pointer;
+          color: white;
+        }
+    
+        ul li ul {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+    padding-left: 0;
+          left: 0;
+          display: none;
+          background: transparent;
+        }
+
+        ul li:hover > ul,
+        ul li ul:hover {
+          visibility: visible;
+          opacity: 1;
+          display: block;
+          min-width: 250px;
+          text-align: left;
+          padding-top: 20px;
+          box-shadow: 0px 3px 5px -1px #ccc;
+        }
+        ul li ul li {
+          clear: both;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 20px;
+          border-style: none;
+        }
+        ul li ul li a:hover {
+          padding-left: 10px;
+          border-left: 2px solid #3d3a50;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            color: #8851ff;
+        }
+    }
+     ul li ul li a { transition: all 0.5s ease; }
   }
+  
   @media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-1 {width: 8.33%;}
@@ -45,4 +126,105 @@ body{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+    header{
+      width: 100%;
+      justify-content:center;
+      display: inline-flex;
+      flex-direction: row;
+    }
+
+    nav {
+      &.primary-navigation {
+        margin: 0 auto;
+        display: flex;
+        align-self: center;
+      
+        padding: 2% 0 0 0;  
+        text-align: center;
+        font-size: 20px;
+    
+        ul li {
+          align-self: center;
+          list-style: none;
+          margin: 0;
+          border-left: 2px solid #580ef6;
+          display: inline-flex;
+          padding: 0 40px;
+          position: relative;
+          text-decoration: none;
+          text-align: center;
+          font-family: arvo;
+        }
+    
+        li a {
+          color: white;
+        }
+    
+        li a:hover {
+          color: #8851ff;
+        }
+    
+        li:hover {
+          cursor: pointer;
+          color: white;
+        }
+    
+        ul li ul {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          padding-left: 0;
+          left: 0;
+          display: none;
+          background: transparent;
+        }
+    
+        ul li:hover > ul
+        ul li ul:hover {
+          visibility: visible;
+          opacity: 1;
+          display: block;
+          min-width: 250px;
+          text-align: left;
+          padding-top: 20px;
+          box-shadow: 0px 3px 5px -1px #ccc;
+        }
+    
+        ul li ul li {
+          clear: both;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 20px;
+          border-style: none;
+        }
+    
+        ul li ul li a:hover {
+          padding-left: 10px;
+          border-left: 2px solid #8851ff;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    
+    a {
+    
+        text-decoration: none;
+    
+        &:hover {
+            color: #3d3a50;
+        }
+     
+    }
+    
+     ul li ul li a { transition: all 0.5s ease; }
+    
+    
+    .Logo{
+      width: 7%;
+      height: 7%;
+      padding-left: 1%;
+      padding-top: 1%;
+      
+    }
   }

@@ -1,25 +1,9 @@
 colors{
-    color :#1a1c22, #3d3a50, #580ef6,#f7f7f7
+    color :#1a1c22, #580ef6,#f7f7f7, #8851ff
     
 }
 
-<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
 
-<nav role="navigation" class="primary-navigation">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Work &dtrif;</a>
-      <ul class="dropdown">
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Illustration</a></li>
-        <li><a href="#">Iconography</a></li>
-      </ul>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
 nav {
     &.primary-navigation {
       margin: 0 auto;
@@ -46,7 +30,7 @@ nav {
       }
   
       li a:hover {
-        color: #3ca0e7;
+        color: #3d3a50;
       }
   
       li:hover {
@@ -84,7 +68,7 @@ nav {
   
       ul li ul li a:hover {
         padding-left: 10px;
-        border-left: 2px solid #3ca0e7;
+        border-left: 2px solid #3d3a50;
         transition: all 0.3s ease;
       }
     }
@@ -95,7 +79,7 @@ nav {
       text-decoration: none;
   
       &:hover {
-          color: #3CA0E7;
+          color: #3d3a50;
       }
    
   }
