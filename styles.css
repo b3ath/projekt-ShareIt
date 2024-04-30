@@ -133,11 +133,7 @@ body{
       display: inline-flex;
       flex-direction: row;
     }
-    .side{
-      position: relative;
-      width: 25vw;
-      height: 100%;
-      background-color: transparent;
+  
     }
     nav {
       &.primary-navigation {
@@ -238,6 +234,7 @@ body{
     .preview{
       position: relative;
       display: flex;
+      
       width: 50vw;
       height: 50vh;
       background-color: white;
@@ -253,21 +250,29 @@ body{
       &.content{
        display: inline-flex;
        align-items: center;
-       align-self: center;
+       align-self: flex-end;
        text-decoration: none;
        text-align: center;
        font-family: arvo;
+       padding-right:20px ;
        
        justify-content: space-between;
 
        ul li{
         color:black;
         display: inline-block;
-        padding: 0,20px;
+        position: relative;
 
 
        }
-
+       
+       li a{
+        padding: 0 25px;
+        border-left: 1px solid #1a1c22;
+       }
+       li a:hover{
+        color: #3d3a50;
+       }
       }
     }
-  }
+  
