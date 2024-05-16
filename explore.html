@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.co m/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="icon" tapy="image/svg" href="./imgs/vaadin--paperplane.svg">
+
+    <title>Explore</title>
+</head>
+<body>
+    <header>
+        <img class="Logo" src="./imgs/vaadin--paperplane.svg", alt="logo">
+        <nav role="navigation" class="primary-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="upload yours.html">Upload yours</a> &dtrif;
+                    <ul class="dropdown">
+                        <li ><a href="login.html">login</a></li>
+                        <li ><a href="register.html">register</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="row">
+        <div class="col-3">
+            <div class="recommended">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="preview">
+                <nav class="content">
+                    <ul>
+                        <li><a>See more</a></li>
+                        <li><a>*username*</a></li>
+                        <li><a>***</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+</body>
+</html>
+nav{
+    &.content{
+     display: inline-flex;
+     align-items: center;
+     align-self: flex-end;
+     text-decoration: none;
+     text-align: center;
+     font-family: arvo;
+     padding-right:20px ;
+     
+     justify-content: space-between;
+
+     ul li{
+      color:black;
+      display: inline-block;
+      position: relative;
+
+
+     }
+     
+     li a{
+      padding: 0 25px;
+      border-left: 2px solid #8851ff;
+     }
+     li a:hover{
+      color: #8851ff;
+     }
+    }
+  }
