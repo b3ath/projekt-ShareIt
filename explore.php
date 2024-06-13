@@ -13,15 +13,17 @@
 
 <body>
 <header>
-    <div class="group-1">
-        <img class="Logo" src="./imgs/icons/vaadin--paperplane.svg", alt="logo">
-        <h1>ShareIt</h1>
-    </div>
+    <a href="index.php">
+      <div class="group-1">
+          <img class="Logo" src="./imgs/icons/vaadin--paperplane.svg", alt="logo">
+          <h1>ShareIt</h1>
+      </div>
+    </a>
     <nav role="navigation" class="primary-navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contactus.html">Contact us</a></li>
-            <li><a href="explore.html">Explore</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="explore.php">Explore</a></li>
             <li><input type="file" class="upload" id="imageinput" accept="image/*">
             <label class="upload-label" for="imageinput">Select a File</label>
             <button onclick="addImage()">Select a File</button></li>
