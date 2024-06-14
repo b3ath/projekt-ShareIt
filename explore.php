@@ -24,68 +24,89 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="contactus.php">Contact us</a></li>
             <li><a href="explore.php">Explore</a></li>
-            <li><input type="file" class="upload" id="imageinput" accept="image/*">
-            <label class="upload-label" for="imageinput">Select a File</label>
-            <button onclick="addImage()">Select a File</button></li>
+            <li>
+              
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image 
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
+            </li>
         </ul>
     </nav>
 </header>
+
+<?php
+$dir = "imgs/uploads/";
+if (is_dir($dir)) {
+    if ($dh = opendir($dir)) {
+        while (($file = readdir($dh)) !== false) {
+            if ($file != "." && $file != "..") {
+                echo "<div><img src='uploads/$file' alt='$file' style='width:200px;'/><p>$file</p></div>";
+            }
+        }
+        closedir($dh);
+    }
+}
+?>
+
+
 <div class="gallery">
     <!-- heading text -->
     <ul class="image-gallery">
       <li>
         <img src="https://images.unsplash.com/photo-1716242035783-5e4b7338171a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDc4fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+        
       </li>
       <li>
         <img src=https://images.unsplash.com/photo-1629196201315-64d42a2fe4d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+        
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1717144585365-ad3a728a6c54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+        
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1717210398107-56f5cc19e2a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+        
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1716854983324-47df4fc807e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM0fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+       
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1716470940908-d1be8dba5b59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQyfGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+       
       </li>
       <li>
         <img src=https://images.unsplash.com/photo-1649287859890-b968dcadb9a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8SnBnNktpZGwtSGt8fGVufDB8fHx8fA%3D%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1706542050674-c192e331b5bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfEpwZzZLaWRsLUhrfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+ 
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1716242035783-5e4b7338171a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDc4fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+
       </li>
       <li>
         <img src=https://images.unsplash.com/photo-1629196201315-64d42a2fe4d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1717144585365-ad3a728a6c54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1717210398107-56f5cc19e2a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="" />
-        <div class="overlay"><span>Image title</span></div>
+
       </li>
     </ul>
   </div>
 
 
-<script src="image_upload.js"></script>
+
 <footer>
   <div class="footer-left">
     <div class="footer-text">
@@ -110,3 +131,54 @@
 
 </body>
 </html>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $target_dir = "imgs/uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+    // Check if image file is a actual image or fake image
+    if (isset($_POST["submit"])) {
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if ($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
+        $uploadOk = 0;
+    }
+
+    // Check file size
+    if ($_FILES["fileToUpload"]["size"] > 500000) { // 500KB limit
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
+    // Allow certain file formats
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            echo "The file ". htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    }
+}
+?>
